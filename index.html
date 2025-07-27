@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Futuriste - Ton Prénom</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section class="hero">
+    <div class="container">
+      <h1 class="glow">[Ton Prénom]</h1>
+      <p class="subtitle">Développeur web freelance — créateur d'expériences numériques.</p>
+    </div>
+  </section>
+
+  <section class="skills">
+    <div class="container">
+      <h2>🧠 Langages & Outils que je maîtrise</h2>
+      <div class="grid">
+        <div class="skill-card">HTML5</div>
+        <div class="skill-card">CSS3 / Flex / Grid</div>
+        <div class="skill-card">JavaScript (DOM, ES6)</div>
+        <div class="skill-card">Git / GitHub</div>
+        <div class="skill-card">WordPress</div>
+        <div class="skill-card">Responsive Design</div>
+        <div class="skill-card">Animations CSS</div>
+        <div class="skill-card">Debug & Optimisation</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services">
+    <div class="container">
+      <h2>🚀 Ce que je peux faire pour vous</h2>
+      <ul>
+        <li>✔️ Création de sites vitrines modernes</li>
+        <li>✔️ Refonte et optimisation responsive</li>
+        <li>✔️ Intégration de landing pages</li>
+        <li>✔️ Résolution de bugs HTML/CSS/JS</li>
+        <li>✔️ Assistance à la création de contenu web</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 – [Ton Prénom] | Portfolio designé avec passion 🚀</p>
+  </footer>
+
+  <script>
+    // Animation d'apparition au scroll
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    });
+
+    document.querySelectorAll('.skill-card, .services li').forEach(el => {
+      el.classList.add('hidden');
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
